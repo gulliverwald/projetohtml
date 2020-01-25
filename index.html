@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css" />
+    <title>App Homepage</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="./img/logo.svg" alt="logo" />
+            </div>
+        </header>
+
+        <main>
+            <sidebar>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="flex-box-sidenav">
+                    <span onclick="openNav()">
+                        <i class="fa fa-bars" style="font-size: 30px;"></i>
+                    </span>
+                </div>
+            </sidebar>
+
+            <div class="container-inputs">
+                <h3>Receba informações e participe do Site Maneiro.</h3>
+                <p>Não perca as novidades e promoções.</p>
+                <div class="form">
+                    <input type="text" name="name" autocomplete="off" required />
+                    <label for="name" class="label-name">
+                    <span class="content-name">Nome</span>
+                </label>
+                </div>
+                <div class="form">
+                    <input type="text" name="name" autocomplete="off" required />
+                    <label for="name" class="label-name">
+                    <span class="content-name">Email</span>
+                </label>
+                </div>
+            </div>
+            <div class="form-btn-container">
+                <button class="form-btn">Enviar</button>
+            </div>
+
+            <section class="product-wrapper">
+                <h2 class="section-title -border">Produtos</h2>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <img src="./img/crash-dlc.jpg" alt="crash-dlc" />
+                        <h1>Nova DLC de Crash Bandicoot</h1>
+                    </div>
+                    <div class="card">
+                        <img src="./img/goose-game.jpg" alt="goose-game" />
+                        <h1>Jogue como um ganso do mal, com Untitled Goose Game</h1>
+                    </div>
+                    <div class="card">
+                        <img src="./img/celeste.jpg" alt="celeste" />
+                        <h1>Escale Montanhas e aprenda muito com seus erros, com Celeste</h1>
+                    </div>
+                </div>
+                <div class="card-selector">
+                    <i class="fa fa-chevron-left" style="font-size: 20px;"></i>
+                    <i class="fa fa-circle"></i>
+                    <i class="fa fa-circle"></i>
+                    <i class="fa fa-circle"></i>
+                    <i class="fa fa-chevron-right" style="font-size: 20px;"></i>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </footer>
+    </div>
+</body>
+
+<script>
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "200px";
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+</html>

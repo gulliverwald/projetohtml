@@ -1,0 +1,313 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #303a52;
+}
+
+body p {
+    color: #f0f0f0;
+}
+
+
+/* Container e Grid */
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 10vh 150vh 10vh;
+    grid-template-areas: "h" "m" "f";
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    grid-area: h;
+    background: #252d41;
+}
+
+.logo-container {
+    display: flex;
+}
+
+.logo-container img {
+    height: 10vh;
+}
+
+
+/* Sidebar */
+
+.flex-box-sidenav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.flex-box-sidenav i {
+    cursor: pointer;
+    color: #151b2b;
+}
+
+.flex-box-sidenav i:hover {
+    color: #fc5185;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #283146;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #e9e9e9;
+    display: block;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #fc5185;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/* Main */
+
+main {
+    grid-area: m;
+}
+
+.container-inputs h3 {
+    color: #43dde6;
+}
+
+.container-inputs {
+    height: 30vh;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    width: 50%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+.form input {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    color: #f0f0f0;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #43dde6;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.content-name {
+    position: absolute;
+    color: #f0f0f0;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus+.label-name .content-name,
+.form input:valid+.label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #43dde6;
+}
+
+.form input:focus+.label-name::after,
+.form input:valid+.label-name::after {
+    transform: translateX(0%);
+}
+
+.form-btn-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form-btn {
+    background-color: #fc5185;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    box-shadow: 0 9px #be3e64;
+}
+
+.form-btn:hover {
+    background-color: #e94b7a;
+    cursor: pointer;
+}
+
+.form-btn:active {
+    background-color: #e94b7a;
+    box-shadow: 0 5px #be3e64;
+    transform: translateY(2px);
+}
+
+.product-wrapper {
+    max-width: 1202px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    margin-top: 50px;
+}
+
+.section-title {
+    display: block;
+    position: relative;
+    width: 100% !important;
+    font-size: 20px;
+    line-height: 24px;
+    color: #43dde6;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.section-title.-border:after {
+    content: "";
+    position: absolute;
+    bottom: 40%;
+    width: 100%;
+    height: 2px;
+    margin-left: 6px;
+    background: #43dde6;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.card img {
+    height: 60vh;
+}
+
+.card-selector {
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 42%;
+}
+
+.card-selector .fa-circle {
+    color: #1a202e;
+}
+
+.card-selector .fa-chevron-right,
+.fa-chevron-left {
+    color: #e94b7a;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    grid-area: f;
+    justify-content: space-around;
+    background: #151b2b;
+}
